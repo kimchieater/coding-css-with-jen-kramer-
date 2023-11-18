@@ -39,7 +39,9 @@ h3 {
 /* intro style */
 
 #intro {
-  padding-bottom: 10rem;
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #intro p {
@@ -71,12 +73,18 @@ h3 {
 }
 
 #contact a {
-  color: var(--magenta);
+  color: var(--white);
+  padding: 1rem;
+  background-color: var(--magenta);
+  border-radius: 9px;
+  text-decoration: none;
+  font-family: var(--mono);
 }
 
 #contact a:hover {
   text-decoration: none;
-  color: var(--hotmag);
+  color: var(--white);
+  background-color: var(--hotmag);
 }
 
 #contact p:last-child {
@@ -134,9 +142,43 @@ nav [class*="fa-"]:hover {
   padding: 0.5rem;
   background-color: var(--magenta);
   border-radius: 10px;
+  font-family: var(--mono);
+  text-decoration: none;
 }
 .button:hover {
   cursor: pointer;
   background-color: var(--hotmag);
   color: var(--white);
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
+footer {
+  margin: 0 auto;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+footer [class*="fa-"] {
+  color: var(--magenta);
+  font-size: 150%;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 1rem;
+  gap: 20px;
 }
